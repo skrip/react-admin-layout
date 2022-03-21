@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "target": "es2018",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "noEmitOnError": true,
+      "lib": ["es2017", "dom"],
+      "jsx": "react",
+      "strict": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "importHelpers": true,
+      "outDir": "out",
+      "sourceMap": true,
+      "inlineSources": true,
+      "rootDir": "./",
+      "incremental": true,
+      "allowJs": true
+    },
+    "include": ["**/*.ts", "**/*.tsx", "typings/*", "./jest-setup.ts"],
+    "exclude": [
+      ".git",
+      "node_modules",
+      "dist",
+      ".parcel-cache",
+    ]
+  }
+  
