@@ -22,6 +22,12 @@ export function Icon(props: IconProps) {
         return <icons.FaDelicious />;
       case 'FaGithub':
         return <icons.FaGithub />;
+      case 'FaUser':
+        return <icons.FaUser />;
+      case 'FaSignOutAlt':
+        return <icons.FaSignOutAlt />;
+      case 'FaCog':
+        return <icons.FaCog />;
       default:
         return <></>;
     }
