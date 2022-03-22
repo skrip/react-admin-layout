@@ -71,7 +71,7 @@ export function Input(props: InputProps) {
   };
 
   return (
-    <div className="form m-2 md:w-64 w-full md:mt-2 mt-8 md:mb-2 mb-4">
+    <div className="flex flex-col w-full md:mt-2 mt-8 md:mb-2 mb-4">
       <label className="block">
         <span className="md:mt-0 mt-8 md:mb-0 mb-4 block md:text-sm text-5xl font-medium text-gray-700">
           {title}
