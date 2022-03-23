@@ -1,6 +1,6 @@
 ### Boilerplate react with admin Layout Tailwindcss <br /><br />
 
-[![Screen-Shot-2022-03-23-at-23-35-55.png](https://i.postimg.cc/SxzFF0DZ/Screen-Shot-2022-03-23-at-23-35-55.png)](https://postimg.cc/TKGHgs8m)
+[![Screen-Shot-2022-03-24-at-02-15-52.png](https://i.postimg.cc/qqHv9FbP/Screen-Shot-2022-03-24-at-02-15-52.png)](https://postimg.cc/R6Gmtgzd)
 
 ## Installation
 

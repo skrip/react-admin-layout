@@ -73,12 +73,12 @@ export function Inventory() {
     () => [
       {
         Header: 'Column 1',
-        accessor: 'col1'
+        accessor: 'col1',
       },
       {
         Header: 'Column 2',
         accessor: 'col2',
-        disableSortBy: true
+        disableSortBy: true,
       },
       {
         Header: 'Column 3',
@@ -117,8 +117,8 @@ export function Inventory() {
   );
 
   const onSort = (sort: SortingRule<Cols>[]) => {
-    console.log('di sort ', sort)
-  }
+    console.log('di sort ', sort);
+  };
 
   const render = () => {
     return (
