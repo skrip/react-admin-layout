@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {Table, Cols} from '../components';
-import {Column} from 'react-table';
+import {Column, SortingRule} from 'react-table';
 
 export function Inventory() {
   const data = useMemo(
@@ -41,6 +41,30 @@ export function Inventory() {
         col9: 'World',
         col10: 'World',
       },
+      {
+        col1: 'whatever',
+        col2: 'you want',
+        col3: 'World',
+        col4: 'World',
+        col5: 'World',
+        col6: 'World',
+        col7: 'World',
+        col8: 'World',
+        col9: 'World',
+        col10: 'World',
+      },
+      {
+        col1: 'whatever',
+        col2: 'you want',
+        col3: 'World',
+        col4: 'World',
+        col5: 'World',
+        col6: 'World',
+        col7: 'World',
+        col8: 'World',
+        col9: 'World',
+        col10: 'World',
+      },
     ],
     [],
   );
@@ -49,11 +73,12 @@ export function Inventory() {
     () => [
       {
         Header: 'Column 1',
-        accessor: 'col1',
+        accessor: 'col1'
       },
       {
         Header: 'Column 2',
         accessor: 'col2',
+        disableSortBy: true
       },
       {
         Header: 'Column 3',
@@ -91,11 +116,15 @@ export function Inventory() {
     [],
   );
 
+  const onSort = (sort: SortingRule<Cols>[]) => {
+    console.log('di sort ', sort)
+  }
+
   const render = () => {
     return (
       <div className="flex flex-col">
         <div className="border-b text-lg mb-4">Inventory</div>
-        <Table data={data} columns={columns} />
+        <Table data={data} columns={columns} onSort={onSort} />
       </div>
     );
   };

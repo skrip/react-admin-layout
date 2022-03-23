@@ -4,6 +4,7 @@
       "module": "esnext",
       "moduleResolution": "node",
       "noEmitOnError": true,
+      "skipLibCheck": true,
       "lib": ["es2017", "dom"],
       "jsx": "react",
       "strict": true,
