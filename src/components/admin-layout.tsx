@@ -1,16 +1,21 @@
 import React, {useEffect, useState} from 'react';
 import {Outlet} from 'react-router-dom';
 import img_avatar from '../../public/images/img_avatar.png';
-import {PopUpMenu, PopMenuType, SideBarMenu} from '.';
+import {PopUpMenu, PopMenuType, SideBarMenu, DialogModal} from '.';
 
 export interface AdminLayoutProps {
   name: string;
 }
 
 export function AdminLayout(props: AdminLayoutProps) {
+  const [showModalLogout, setShowModalLogout] = useState(false);
   useEffect(() => {
     console.log('props ', props.name);
   }, []);
+
+  const onDialogModalClose = () => {
+    setShowModalLogout(false);
+  };
 
   const [menupopup] = useState<Array<PopMenuType>>([
     {
@@ -38,7 +43,9 @@ export function AdminLayout(props: AdminLayoutProps) {
   ]);
 
   const onMenuPopUpClick = (name: string) => {
-    console.log('klik ', name);
+    if (name == 'Logout') {
+      setShowModalLogout(true);
+    }
   };
 
   return (
@@ -63,6 +70,8 @@ export function AdminLayout(props: AdminLayoutProps) {
           <Outlet />
         </div>
       </div>
+
+      <DialogModal open={showModalLogout} onClose={onDialogModalClose} />
     </div>
   );
 }

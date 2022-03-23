@@ -2,14 +2,14 @@ import React, {useState, useEffect} from 'react';
 import classNames from 'classnames';
 
 export interface InputProps {
-  disable: boolean;
-  value: string;
+  disable?: boolean;
+  value?: string;
   type: string;
   title: string;
-  placeholder: string;
+  placeholder?: string;
   name: string;
-  error: boolean;
-  errorText: string;
+  error?: boolean;
+  errorText?: string;
   className?: string;
   onChange?: (name: string, value: string) => void;
 }
@@ -32,7 +32,9 @@ export function Input(props: InputProps) {
   }, [props.className]);
 
   useEffect(() => {
-    setDisable(props.disable);
+    if (props.disable != undefined) {
+      setDisable(props.disable);
+    }
   }, [props.disable]);
 
   useEffect(() => {
@@ -44,7 +46,9 @@ export function Input(props: InputProps) {
   }, [props.title]);
 
   useEffect(() => {
-    setPlaceholder(props.placeholder);
+    if (props.placeholder != undefined) {
+      setPlaceholder(props.placeholder);
+    }
   }, [props.placeholder]);
 
   useEffect(() => {
@@ -56,11 +60,15 @@ export function Input(props: InputProps) {
   }, [props.value]);
 
   useEffect(() => {
-    setError(props.error);
+    if (props.error != undefined) {
+      setError(props.error);
+    }
   }, [props.error]);
 
   useEffect(() => {
-    setErrorText(props.errorText);
+    if (props.errorText != undefined) {
+      setErrorText(props.errorText);
+    }
   }, [props.errorText]);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
